@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: courier, 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #E0E0E0;
+    color: #080808;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-container {
+    padding: 20px 5%;
+    background-color: #547793;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 160px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #645D5D;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.background {
+    background-image: url(images/background.jpeg);
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    height: 90%;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Welcome page*/
+.welcome-page {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+}
+
+.welcome-page h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.welcome-btn {
+    display: inline-block;
+    margin: 50px 20px;
+    width: fit-content;
+    border: 2px solid #C1C6CC;
+    background: #C1C6CC;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: background 0.7s;
+    cursor: pointer;
+}
+
+.welcome-btn:hover {
+    background: #807D7D;
+    border: 2px solid #807D7D;
+}
+
+nav .fa-xmark, nav .fa-bars {
+    display: none;
+}
+
+/* Search bar*/
+.searchbar {
+    width: 115%;
+    max-width: 350px;
+    display: inline-flex;
+}
+
+.searchbar-input {
+    flex-grow: 1;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px 0 0 5px;
+    background-color: #F4FAF9;
+    transition: background 0.25s, box-shadow 0.25s;
+}
+
+.searchbar-input:focus {
+    background: #FFFFFF;
+    box-shadow: 0 0 2px #E0E0E0;
+}
+
+.searchbar-input::placeholder {
+    color: #96A4A9;
+}
+
+.searchbar-button {
+    width: 40px;
+    background: #96A4A9;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.searchbar-button:active {
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+/* body of other pages*/
+.body-container{
+    height: 90vh;
+}
+
+.body-container h1{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #645D5D;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* stock price page*/
+#stock-price {
+    background-color: #807D7D;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 25%;
+    width: 50%;
+    padding: 20px;
+}
+
+#stock-price h1 {
+    color: #FFFFFF;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#stock-price p {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+/*Company Info page*/
+#company-info {
+    background-color: #807D7D;
+    color: #FFFFFF;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 90%;
+    padding: 25px;
+}
+
+#company-info h1 {
+    color: #FFFFFF;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#company-info p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#company-info .highlight {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*stock news pages*/
+#searchbar-news-button{
+    width: 40px;
+    height: 40px;
+    background: #96A4A9;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cardbox {
+    border: 1px solid #C6CDD5;
+    background-color: #FFF;
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    height: 550px;
+    border-radius: 8px;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.cardbox-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #e7e7e7;
+    z-index: 77;
+}
+
+.card-items .card:first-child {
+    padding-top: 10px;
+}
+
+.card-items .card {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    border: 0;
+}
+
+.image-preview {
+    position: relative;
+    width: 30%;
+    float: left;
+}
+
+.cardimage {
+    padding: 0 1rem 1rem 0;
+    position: relative;
+    z-index: 5;
+    width: 300px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.titlesearch {
+    line-height: 1rem;
+    font-size: 0.95rem;
+    color: #5A64D3;
+    padding-top: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    text-align: left;
+}
+
+.titlesearch a:link {
+    text-decoration: none;
+}
+
+.titlesearch a {
+    color: #1274ED;
+}
+
+.textsearch {
+    font-size: 0.8rem;
+    color: #000;
+    line-height: 1rem;
+    padding-top: 0.2rem;
+    position: relative;
+    text-align: left;
+}
+
+.bottom {
+    position: absolute;
+    left: 30%;
+    margin-top: 0;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.bottomticker {
+    background-color: #C6CDD5;
+    color: #FFF;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 4px 8px;
+    margin-right: 3px;
+}
+
+.bottomsearchtext {
+    font-size: 0.75rem;
+    color: #333;
+    line-height: 1rem;
+    margin-left: 5px;
+}
+
+/*Copyright*/
+#copyright {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    padding: 8px 0;
+    background: #547793;
+    color: #FFFFFF;
+    font-weight: 300;
+    z-index: 10;
+}
+
+/*Mobile Screen*/
+@media only screen and (max-width: 1217px){
+    .background {
+        height: 85%;
+    }
+}
+
+@media only screen and (max-width: 1040px){
+    .background {
+        height: 78%;
+    }
+}
+
+@media only screen and (max-width: 878px){
+    .welcome-page {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+
+    .welcome-btn {
+        margin: 25px 10px;
+    }
+}
+
+@media only screen and (max-width: 648px){
+    .body-container {
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .welcome-page {
+        margin-top: 4%;
+        font-size: 16px;
+    }
+
+    .welcome-page h1 {
+        font-size: 30px;
+    }
+
+    .welcome-btn {
+        margin: 25px 10px;
+    }
+
+    nav .fa-xmark, nav .fa-bars {
+        display: block;
+        font-size: 25px;
+        color:#FFFFFF;
+    }
+
+    nav ul {
+        background: #547793;
+        position: fixed;
+        top: -500px;
+        left: 0px;
+        height: 350px;
+        width: 100%;
+        padding-top: 50px;
+        z-index: 3;
+        transition: top 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+        text-align: center;
+    }
+
+    nav .fa-xmark{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .background {
+        height: 90%;
+    }
+
+    .body-container {
+        height: 120vh;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-height: 685px){
+    .cardbox {
+        height: 400px;
+        margin-top: 50px;
+    }
+}
