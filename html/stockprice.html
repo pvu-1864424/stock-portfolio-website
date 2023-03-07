@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Information</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <script src="https://kit.fontawesome.com/6f5be9a53f.js" crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+</head>
+<body>
+    <div class="nav-container">
+        <!--nav bar-->
+        <nav>
+            <img src="../images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="companyinfo.html">Company Information</a></li>
+                <li><a href="stockprice.html">Stock Price </a></li>
+                <li><a href="stocknews.html">Stock News </a></li>
+                <li>
+                    <form action="stockprice.html" method="GET">
+                        <div class="searchbar">
+                            <input type="text" class="searchbar-input" id="searchbar-input" name="search" placeholder="Search/Enter Stock Ticker">
+                            <button type="button" class="searchbar-button" id="searchbar-price-button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+                </li>
+                <i class="fa-solid fa-xmark" id="closemenu"></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="openmenu"></i>
+        </nav>
+    </div>
+    <div class="body-container">
+        <h1>Stock Quote Report</h1>
+        <div id="stock-price">
+            <h1 id="price-ticker-name">AAPL</h1>
+            <strong>Open Price: $</strong><p id="price-open">153.785</p>
+            <strong>Close Price: $</strong><p id="price-close">153.83</p>
+            <strong>Highest Price: $</strong><p id="price-highest">156.3</p>
+            <strong>Lowest Price: $</strong><p id="price-lowest">153.46</p>
+            <strong>Number of Transaction: </strong><p id="price-transaction-num">691990</p>
+            <strong>Trading Volume: </strong><p id="price-trade-volumn">87558028</p>
+            <strong>Volume Weighted Average Price: $</strong><p id="price-vw">154.6895</p>
+        </div>
+    </div>
+    <div id="copyright">
+        <p>Copyright &copy; Phuong (Charles) Vu.</p>
+    </div>
+</body>
+</html>

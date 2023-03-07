@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Watchlist</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <script src="https://kit.fontawesome.com/6f5be9a53f.js" crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+</head>
+<body>
+    <div class="nav-container">
+        <!--nav bar-->
+        <nav>
+            <img src="../images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="companyinfo.html">Company Information</a></li>
+                <li><a href="stockprice.html">Stock Price </a></li>
+                <li><a href="stocknews.html">Stock News </a></li>
+                <li>
+                    <form action="stockprice.html" method="GET">
+                        <div class="searchbar">
+                            <input type="text" class="searchbar-input" id="searchbar-input" name="search" placeholder="Search/Enter Stock Ticker">
+                            <button type="button" class="searchbar-button" id="searchbar-compinfo-button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+                </li>
+                <i class="fa-solid fa-xmark" id="closemenu"></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="openmenu"></i>
+        </nav>
+    </div>
+    <div class="body-container">
+        <h1>Business Profile</h1>
+        <div id="company-info">
+            <h1 id="company-name">Apple Inc.</h1>
+            <p id="company-description">Apple designs a wide variety of consumer electronic devices, 
+                including smartphones (iPhone), tablets (iPad), PCs (Mac), smartwatches (Apple Watch), 
+                and AirPods. The iPhone makes up most of Apple's total revenue. In addition, Apple offers 
+                its customers a variety of services such as Apple Music, iCloud, Apple Care, Apple TV+, Apple 
+                Arcade, Apple Fitness, Apple Card, and Apple Pay, among others. Apple's products include internally 
+                developed software and semiconductors, and the firm is well known for its integration of hardware, 
+                software, semiconductors, and services. Apple's products are distributed online as well as through 
+                company-owned stores and third-party retailers. The company generates roughly 40% of its revenue 
+                from the Americas, with the remainder earned internationally.</p>
+            <p><span class="highlight">Address: </span><span id="company-address">ONE APPLE PARK WAY, CUPERTINO, CA 95014</span></p>
+            <p><span class="highlight">Phone Number: </span><span id="company-phone">(408) 996-1010</span></p>
+            <p><span class="highlight">Website: </span><span id="company-web">https://www.apple.com</span></p>
+            <p><span class="highlight">Employees: </span><span id="company-employee">164000</span></p>
+            <p><span class="highlight">Sector(s): </span><span id="company-sic-des">ELECTRONIC COMPUTERS</span></p>
+            <p><span class="highlight">Stock Exchange Ticker: </span><span id="company-ticker">AAPL</span></p>
+            <p><span class="highlight">Primary Listing Exchange: </span><span id="company-primary">XNAS</span></p>
+            <p><span class="highlight">First Publically List: </span><span id="company-first-list">1980-12-12</span></p>
+            <p><span class="highlight">Market Capitalization: </span><span id="company-market-cap">2433889953180</span></p>
+            <p><span class="highlight">Outstanding Shares Number: </span><span id="company-outstanding-share-num">15821950000</span></p>
+            <p><span class="highlight">Weighted Outstanding Shares Number: </span><span id="company-weighted-outstanding-share-num">15821946000</span></p>
+        </div>
+    </div>
+    <div id="copyright">
+        <p>Copyright &copy; Phuong (Charles) Vu.</p>
+    </div>
+</body>
+</html>
