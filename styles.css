@@ -7,11 +7,13 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     background: #E0E0E0;
     color: #080808;
+    height: 100%;
 }
 
 #header {
@@ -166,10 +168,12 @@ nav .fa-xmark, nav .fa-bars {
 
 /* body of other pages*/
 .body-container{
-    height: 90vh;
+    height: 100%;
+    margin: 0; 
+    padding: 0;
 }
 
-.body-container h1{
+.body-container h1, .body-container-chart h1 {
     font-size: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -202,6 +206,31 @@ nav .fa-xmark, nav .fa-bars {
 #stock-price p {
     margin-bottom: 10px;
     font-size: 17px;
+}
+
+#searchbar-chart {
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+/*Stock Price History page*/
+.body-container-chart {
+    margin-bottom: 25px;
+}
+
+.chart-choice {
+    font-size: 20px;
+    margin: auto 38%;
+}
+
+.chart-choice select {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.chart-choice select:focus {
+    outline: none;
 }
 
 /*Company Info page*/
@@ -331,6 +360,9 @@ nav .fa-xmark, nav .fa-bars {
     padding-top: 0.2rem;
     position: relative;
     text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .bottom {
@@ -396,7 +428,7 @@ nav .fa-xmark, nav .fa-bars {
 
 @media only screen and (max-width: 648px){
     .body-container {
-        height: 100vh;
+        height: 95vh;
     }
 }
 
@@ -450,7 +482,7 @@ nav .fa-xmark, nav .fa-bars {
     }
 
     .body-container {
-        height: 120vh;
+        height: 100vh;
     }
 
     .copyright {
@@ -462,5 +494,9 @@ nav .fa-xmark, nav .fa-bars {
     .cardbox {
         height: 400px;
         margin-top: 50px;
+    }
+
+    .body-container {
+        height: 100vh;
     }
 }

@@ -9,19 +9,23 @@ function domLoaded() {
 
     openBtn.addEventListener("click", openmenu);
     closeBtn.addEventListener("click", closemenu);
-
+    
     //search bar
-    if (window.location.href == "file:///Users/phuongvu/Desktop/UW/Winter%202023/CSS%20481/Final%20Project/stock-portfolio-web/html/stockprice.html") {
-        //search price    
-        const searchPrice = document.getElementById("searchbar-price-button");
+    //search price    
+    const searchPrice = document.getElementById("searchbar-price-button");
+    if (searchPrice) {
         searchPrice.addEventListener("click", handlePriceSubmit);
-    }else if (window.location.href == "file:///Users/phuongvu/Desktop/UW/Winter%202023/CSS%20481/Final%20Project/stock-portfolio-web/html/companyinfo.html") {
-        //search company info
-        const searchInfo = document.getElementById("searchbar-compinfo-button");
+    }
+    
+    //search company info
+    const searchInfo = document.getElementById("searchbar-compinfo-button");
+    if (searchInfo){
         searchInfo.addEventListener("click", handleInfoSubmit);
-    } else if (window.location.href == "file:///Users/phuongvu/Desktop/UW/Winter%202023/CSS%20481/Final%20Project/stock-portfolio-web/html/stocknews.html") {
-        //search stock news
-        const searchNews = document.getElementById("searchbar-news-button");
+    }
+
+    //search stock news
+    const searchNews = document.getElementById("searchbar-news-button");
+    if (searchNews) {
         searchNews.addEventListener("click", handleNewsSubmit);
     }
 }
@@ -36,7 +40,8 @@ function closemenu() {
     sidemenu.style.top = "-500px";
 }
 
-function handlePriceSubmit() {
+function handlePriceSubmit(event) {
+    event.preventDefault();
     var input = document.getElementById("searchbar-input");
     var ticker = input.value;
     input.value = "";
@@ -44,7 +49,8 @@ function handlePriceSubmit() {
     fetchPrice(ticker);
 }
 
-function handleInfoSubmit() {
+function handleInfoSubmit(event) {
+    event.preventDefault();
     var input = document.getElementById("searchbar-input");
     var ticker = input.value;
     input.value = "";

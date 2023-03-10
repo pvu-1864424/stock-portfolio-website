@@ -1,5 +1,13 @@
 {
   "dependencies": {
     "firebase": "^9.17.2"
+  },
+  "scripts": {
+    "start": "live-server ."
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1"
   }
 }
