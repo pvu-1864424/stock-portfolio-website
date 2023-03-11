@@ -280,7 +280,7 @@ nav .fa-xmark, nav .fa-bars {
 
 .cardbox {
     border: 1px solid #C6CDD5;
-    background-color: #FFF;
+    background-color: #FFFFFF;
     width: 90%;
     margin: 20px auto;
     position: relative;
@@ -296,7 +296,7 @@ nav .fa-xmark, nav .fa-bars {
     width: 100%;
     height: 100%;
     display: none;
-    background: #e7e7e7;
+    background: #E7E7E7;
     z-index: 77;
 }
 
@@ -355,7 +355,7 @@ nav .fa-xmark, nav .fa-bars {
 
 .textsearch {
     font-size: 0.8rem;
-    color: #000;
+    color: #000000;
     line-height: 1rem;
     padding-top: 0.2rem;
     position: relative;
@@ -376,7 +376,7 @@ nav .fa-xmark, nav .fa-bars {
 
 .bottomticker {
     background-color: #C6CDD5;
-    color: #FFF;
+    color: #FFFFFF;
     border-radius: 3px;
     font-size: 12px;
     padding: 4px 8px;
@@ -385,7 +385,7 @@ nav .fa-xmark, nav .fa-bars {
 
 .bottomsearchtext {
     font-size: 0.75rem;
-    color: #333;
+    color: #333333;
     line-height: 1rem;
     margin-left: 5px;
 }
